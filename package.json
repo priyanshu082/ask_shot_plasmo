@@ -4,28 +4,50 @@
   "version": "0.0.1",
   "description": "Ask shot ai which take screenshot and tells you about the things present on screen",
   "author": "Priyanshu Singh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/priyanshu082/ask_shot_plasmo.git"
+  },
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
     "package": "plasmo package"
   },
   "dependencies": {
+    "@shadcn/ui": "^0.0.4",
+    "axios": "^1.9.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "fabric": "^6.7.0",
+    "lucide-react": "^0.513.0",
+    "motion": "^12.18.1",
     "plasmo": "0.90.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
     "@types/chrome": "0.0.258",
+    "@types/fabric": "^5.3.10",
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
     "prettier": "3.2.4",
+    "tailwindcss": "^3.4.17",
     "typescript": "5.3.3"
   },
   "manifest": {
     "host_permissions": [
       "https://*/*"
+    ],
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
     ]
   }
 }
