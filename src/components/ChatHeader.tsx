@@ -1,6 +1,6 @@
 import { Edit2 } from "lucide-react"
 
-import { AuthButton } from "../components/AuthButton"
+import { AuthButton } from "./AuthButton"
 
 interface ChatHeaderProps {
   screenshot: string | null

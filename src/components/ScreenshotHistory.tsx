@@ -5,7 +5,7 @@ import {
   deleteScreenshot,
   getScreenshotQuestions,
   getScreenshots
-} from "~utils/api"
+} from "../utils/api"
 
 interface Screenshot {
   _id: string
