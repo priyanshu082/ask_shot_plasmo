@@ -18,7 +18,11 @@ export const signIn = async (): Promise<AuthSession | null> => {
     const left = window.screen.width / 2 - width / 2
     const top = window.screen.height / 2 - height / 2
 
-   
+    const authWindow = window.open(
+      signInUrl,
+      "Auth",
+      `width=${width},height=${height},left=${left},top=${top},resizable,scrollbars=yes,status=1`
+    )
 
     const handleMessage = (event: MessageEvent) => {
       if (event.source !== authWindow) return

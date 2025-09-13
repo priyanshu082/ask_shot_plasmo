@@ -41,7 +41,7 @@ export async function analyzeScreenshot(
     const response = await axios.post(`${API_BASE_URL}/api/analyze`, payload)
 
     return response.data
-  } catch (error) {
+  } catch (error: any) {
     console.error("AnalyzeScreenshot | Error:", error)
 
     // Check if it's an overloaded error response from our API
