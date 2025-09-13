@@ -16,47 +16,7 @@ function ensureValidImageData(imageData: string): string {
   }
 }
 
-export async function analyzeScreenshot(
-  screenshot: string,
-  question: string,
-  screenshotId?: string
-) {
-  try {
-    const validatedScreenshot = ensureValidImageData(screenshot)
 
-    const payload: {
-      screenshot: string
-      question: string
-      screenshotId?: string
-    } = {
-      screenshot: validatedScreenshot,
-      question
-    }
-
-    // If a screenshotId is provided, include it in the request
-    if (screenshotId) {
-      payload.screenshotId = screenshotId
-    }
-
-    const response = await axios.post(`${API_BASE_URL}/api/analyze`, payload)
-
-    return response.data
-  } catch (error) {
-    console.error("AnalyzeScreenshot | Error:", error)
-
-    // Check if it's an overloaded error response from our API
-    if (error.response?.data?.isOverloaded) {
-      throw {
-        isOverloaded: true,
-        message:
-          error.response.data.message ||
-          "Service is experiencing high demand. Please try again later."
-      }
-    }
-
-    throw error
-  }
-}
 
 export async function getScreenshots() {
   try {
