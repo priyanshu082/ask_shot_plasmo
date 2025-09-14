@@ -30,8 +30,8 @@ import {
   ChatMessages,
   ScreenshotDisplay,
   ScreenshotHistory
-} from "~components"
-import { useDrawing, useScreenshot } from "~hooks"
+} from "../components"
+import { useDrawing, useScreenshot } from "../hooks"
 
 interface Message {
   sender: "ai" | "user"
